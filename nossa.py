@@ -1,21 +1,25 @@
-class Jogo():
+class Jogo:
     def __init__(self, nome, tipo, desenvolvedora):
         self.nome = nome
         self.tipo = tipo
         self.desenvolvedora = desenvolvedora
-    def comprar(self):
-        return f"{self.nome} da {self.desenvolvedora} foi comprado"
-    
-    def baixar(self):
-        return f"{self.nome} esta classificado como {self.tipo}"
-    
-jogo1 = Jogo("hollow kight", "Metroidvania", "Team Cherry")
-jogo2 = Jogo("Elden Ring", "Soulsborne", "Fromsoftware")
-jogo3 = Jogo("minecraft", "rpg,mundo aberto", "mojang")
 
-print(jogo1.comprar())
-print(jogo1.baixar())
-print(jogo2.comprar())
-print(jogo2.baixar())
-print(jogo3.comprar())
-print(jogo3.baixar())
+    def iniciar(self):
+        return f"O jogo {self.nome} está iniciando..."
+
+    def atualizar(self):
+        return f"{self.nome} recebeu uma nova atualização!"
+    
+
+jogo1 = Jogo("Hollow Knight", "Metroidvania", "Team Cherry")
+jogo2 = Jogo("Elden Ring", "Soulsborne", "FromSoftware")
+jogo3 = Jogo("Minecraft", "RPG / Mundo Aberto", "Mojang")
+
+print(jogo1.iniciar())
+print(jogo1.atualizar())
+
+print(jogo2.iniciar())
+print(jogo2.atualizar())
+
+print(jogo3.iniciar())
+print(jogo3.atualizar())
